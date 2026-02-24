@@ -15,129 +15,109 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ReviewNewsArticle",
-      "headline": "{{H1}}",
+      "@type": "Review",
       "datePublished": "{{DATE_PUBLISHED}}",
       "author": {
         "@type": "Person",
         "name": "{{AUTHOR_NAME}}"
+      },
+      "headline": "{{H1}}",
+      "publisher": {
+        "@type": "Organization",
+        "name": "testpage1"
       }
     }
     </script>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #f8fafc; }
-        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
-        .cta-gradient { background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%); transition: all 0.3s ease; }
-        .cta-gradient:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(6, 182, 212, 0.4); }
-        .badge-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .7; } }
-        .table-row:nth-child(even) { background: rgba(255,255,255,0.03); }
-        .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
-        .accordion-content.active { max-height: 1000px; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass-morphism { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+        .cta-gradient { background: linear-gradient(135deg, #10b981 0%, #059669 100%); transition: all 0.3s ease; }
+        .cta-gradient:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.4); }
+        .accent-border { border-left: 4px solid #10b981; }
+        .table-row-alt:nth-child(even) { background: rgba(255,255,255,0.03); }
     </style>
-
-<script>
-  var _paq = window._paq = window._paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//statistic.webmatostat.com/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '590']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-
 </head>
 <body class="antialiased">
 
     <!-- Affiliate Disclosure -->
-    <div class="bg-slate-900 text-slate-400 text-[10px] py-1.5 text-center px-4 border-b border-slate-800">
-        AD: I contenuti di questa pagina sono a scopo informativo. Riceviamo commissioni dai partner elencati. 18+ | Gioca Responsabile.
+    <div class="bg-slate-950 text-slate-400 text-[10px] py-1.5 text-center px-4">
+        <p>Pubblicità. Il gioco d'azzardo è riservato ai maggiorenni (+18) e può causare dipendenza. Gioca responsabilmente. Le informazioni su questo sito sono a scopo informativo.</p>
     </div>
 
     <!-- Sticky Navigation -->
-    <nav class="sticky top-0 z-50 glass-card border-b border-slate-800 py-3">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center">
-                    <i data-lucide="shield-check" class="text-white"></i>
+    <nav class="sticky top-0 z-50 glass-morphism border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="bg-emerald-500 p-1.5 rounded-lg">
+                        <i data-lucide="zap" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">TESTPAGE<span class="text-emerald-500">1</span></span>
                 </div>
-                <span class="text-xl font-bold tracking-tight">TESTPAGE<span class="text-cyan-500">1</span></span>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#" class="hover:text-emerald-400 transition">Casino Non AAMS</a>
+                    <a href="#" class="hover:text-emerald-400 transition">Prelievo Immediato</a>
+                    <a href="#" class="hover:text-emerald-400 transition">Bonus</a>
+                </div>
+                <button class="bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-bold cta-gradient">
+                    TOP LIST 2026
+                </button>
             </div>
-            <div class="hidden md:flex gap-6 text-sm font-medium text-slate-300">
-                <a href="#" class="hover:text-cyan-400 transition">Casino Online</a>
-                <a href="#" class="hover:text-cyan-400 transition">Prelievo Immediato</a>
-                <a href="#" class="hover:text-cyan-400 transition">Non AAMS</a>
-            </div>
-            <button class="md:hidden text-slate-300">
-                <i data-lucide="menu"></i>
-            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="relative pt-12 pb-20 overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-cyan-900/20 via-slate-950 to-slate-950 -z-10"></div>
-        <div class="container mx-auto px-4 text-center">
-            <div class="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 px-4 py-1 rounded-full text-xs font-bold mb-6 badge-pulse">
-                <i data-lucide="award" class="w-4 h-4"></i> {{BADGE_TEXT}}
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600 rounded-full blur-[120px]"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                {{BADGE_TEXT}}
             </div>
             <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
                 {{H1}}
             </h1>
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-8">
+            <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8">
                 {{HERO_DESCRIPTION}}
             </p>
             
-            <div class="flex flex-wrap justify-center items-center gap-6 text-sm text-slate-400">
-                <div class="flex items-center gap-2">
-                    <i data-lucide="calendar" class="w-4 h-4 text-cyan-500"></i> {{LAST_UPDATED}}
-                </div>
-                <div class="flex items-center gap-2">
-                    <i data-lucide="user-check" class="w-4 h-4 text-cyan-500"></i> {{AUTHOR_NAME}}
-                </div>
-                <div class="flex items-center gap-2">
-                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Verificato da Esperti
-                </div>
+            <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-400">
+                <span class="flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> {{LAST_UPDATED}}</span>
+                <span class="flex items-center gap-1"><i data-lucide="user" class="w-4 h-4"></i> {{AUTHOR_NAME}}</span>
             </div>
 
-            <!-- Expert Quote -->
-            <div class="mt-10 max-w-3xl mx-auto glass-card p-4 rounded-2xl flex flex-col md:flex-row items-center gap-4 text-left">
-                <div class="w-16 h-16 rounded-full bg-slate-700 flex-shrink-0 border-2 border-cyan-500 overflow-hidden">
-                    <img src="https://ui-avatars.com/api/?name={{AUTHOR_NAME}}&background=06b6d4&color=fff" alt="{{AUTHOR_NAME}}">
-                </div>
-                <div>
-                    <p class="italic text-slate-300 text-sm mb-1">"{{AUTHOR_QUOTE}}"</p>
-                    <p class="text-xs font-bold text-cyan-400 uppercase tracking-wider">{{AUTHOR_NAME}} — {{AUTHOR_TITLE}}</p>
-                </div>
+            <!-- Author Quote -->
+            <div class="mt-10 max-w-2xl mx-auto italic text-slate-300 border-l-2 border-emerald-500 pl-6 py-2">
+                "{{AUTHOR_QUOTE}}"
             </div>
         </div>
     </header>
 
-    <!-- Top 3 Casino Cards -->
-    <section class="container mx-auto px-4 -mt-12 mb-16 relative z-10">
-        <div id="top-cards" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Top 3 Cards -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 mb-16">
+        <div id="top-cards-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Rendered via JS -->
         </div>
     </section>
 
     <!-- Comparison Table Section -->
-    <section class="container mx-auto px-4 mb-20">
-        <div class="glass-card rounded-3xl overflow-hidden border border-slate-800">
-            <!-- Filters & Sorting -->
-            <div class="p-6 border-b border-slate-800 flex flex-col lg:flex-row justify-between items-center gap-4">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div class="glass-morphism rounded-2xl overflow-hidden shadow-2xl">
+            <!-- Filters & Sort -->
+            <div class="p-6 border-b border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
                 <div class="flex flex-wrap gap-2">
-                    <button onclick="filterCasinos('all')" class="px-5 py-2 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 transition active border border-slate-700">{{FILTER_ALL}}</button>
-                    <button onclick="filterCasinos('top_rated')" class="px-5 py-2 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 transition border border-slate-700">{{FILTER_TOP_RATED}}</button>
-                    <button onclick="filterCasinos('fast_payout')" class="px-5 py-2 rounded-xl text-sm font-semibold bg-slate-800 hover:bg-slate-700 transition border border-slate-700">{{FILTER_FAST_PAYOUT}}</button>
+                    <button onclick="filterCasinos('all')" class="px-4 py-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-sm font-semibold transition">{{FILTER_ALL}}</button>
+                    <button onclick="filterCasinos('top')" class="px-4 py-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-sm font-semibold transition">{{FILTER_TOP_RATED}}</button>
+                    <button onclick="filterCasinos('fast')" class="px-4 py-2 rounded-lg bg-slate-700 hover:bg-slate-600 text-sm font-semibold transition">{{FILTER_FAST_PAYOUT}}</button>
                 </div>
-                <div class="flex items-center gap-3">
-                    <span class="text-sm text-slate-400">Ordina per:</span>
-                    <select onchange="sortCasinos(this.value)" class="bg-slate-800 border border-slate-700 text-sm rounded-xl px-4 py-2 outline-none focus:ring-2 focus:ring-cyan-500">
+                <div class="relative">
+                    <select onchange="sortCasinos(this.value)" class="bg-slate-800 border border-slate-700 text-sm rounded-lg px-4 py-2 outline-none focus:ring-2 focus:ring-emerald-500">
                         <option value="recommended">{{SORT_RECOMMENDED}}</option>
                         <option value="rating">{{SORT_RATING}}</option>
                         <option value="name">{{SORT_NAME}}</option>
@@ -149,13 +129,13 @@
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead>
-                        <tr class="bg-slate-900/50 text-slate-400 text-xs uppercase tracking-widest">
-                            <th class="p-5 font-bold">{{COL_BRAND}}</th>
-                            <th class="p-5 font-bold">{{COL_RATING}}</th>
-                            <th class="p-5 font-bold">{{COL_BONUS}}</th>
-                            <th class="p-5 font-bold hidden md:table-cell">{{COL_PAYMENTS}}</th>
-                            <th class="p-5 font-bold hidden lg:table-cell">{{COL_HIGHLIGHT}}</th>
-                            <th class="p-5 font-bold text-center">{{COL_ACTION}}</th>
+                        <tr class="bg-slate-800/50 text-slate-400 text-xs uppercase tracking-wider">
+                            <th class="px-6 py-4 font-bold">{{COL_BRAND}}</th>
+                            <th class="px-6 py-4 font-bold text-center">{{COL_RATING}}</th>
+                            <th class="px-6 py-4 font-bold">{{COL_BONUS}}</th>
+                            <th class="px-6 py-4 font-bold hidden lg:table-cell">{{COL_PAYMENTS}}</th>
+                            <th class="px-6 py-4 font-bold hidden md:table-cell">{{COL_HIGHLIGHT}}</th>
+                            <th class="px-6 py-4 font-bold text-right">{{COL_ACTION}}</th>
                         </tr>
                     </thead>
                     <tbody id="casino-table-body">
@@ -167,232 +147,206 @@
     </section>
 
     <!-- Article Content -->
-    <article class="container mx-auto px-4 max-w-4xl mb-20">
-        <div class="prose prose-invert prose-cyan max-w-none">
-            <section class="bg-slate-900/40 p-8 rounded-3xl border border-slate-800">
-                {{ARTICLE_CONTENT}}
-            </section>
-        </div>
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 prose prose-invert prose-emerald lg:prose-lg">
+        <section class="bg-slate-800/40 p-8 rounded-3xl border border-slate-800">
+            {{ARTICLE_CONTENT}}
+        </section>
     </article>
 
-    <!-- Methodology & Author Section -->
-    <section class="container mx-auto px-4 mb-20">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div class="lg:col-span-2 glass-card p-8 rounded-3xl">
-                <h2 class="text-2xl font-bold mb-4 flex items-center gap-3">
-                    <i data-lucide="microscope" class="text-cyan-500"></i> {{METHODOLOGY_TITLE}}
-                </h2>
-                <p class="text-slate-400 leading-relaxed">
+    <!-- Methodology & Author -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-slate-900 rounded-3xl p-8 border border-slate-800">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-emerald-400">{{METHODOLOGY_TITLE}}</h2>
+                <p class="text-slate-400 leading-relaxed mb-6">
                     {{METHODOLOGY_TEXT}}
                 </p>
-            </div>
-            <div class="glass-card p-8 rounded-3xl border-t-4 border-cyan-500">
-                <h3 class="text-xl font-bold mb-4">L'Esperto</h3>
-                <div class="flex items-center gap-4 mb-4">
-                    <img src="https://ui-avatars.com/api/?name={{AUTHOR_NAME}}&background=06b6d4&color=fff" alt="{{AUTHOR_NAME}}" class="w-14 h-14 rounded-full">
-                    <div>
-                        <div class="font-bold">{{AUTHOR_NAME}}</div>
-                        <div class="text-xs text-cyan-400">{{AUTHOR_TITLE}}</div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center gap-2 text-sm text-slate-300">
+                        <i data-lucide="check-circle-2" class="text-emerald-500 w-5 h-5"></i> Licenza Verificata
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-slate-300">
+                        <i data-lucide="check-circle-2" class="text-emerald-500 w-5 h-5"></i> Test Prelievi Reali
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-slate-300">
+                        <i data-lucide="check-circle-2" class="text-emerald-500 w-5 h-5"></i> Sicurezza SSL
+                    </div>
+                    <div class="flex items-center gap-2 text-sm text-slate-300">
+                        <i data-lucide="check-circle-2" class="text-emerald-500 w-5 h-5"></i> Supporto 24/7
                     </div>
                 </div>
-                <p class="text-sm text-slate-400 italic">Specialista in regolamentazione iGaming e sistemi di pagamento istantanei con oltre 10 anni di esperienza nel settore europeo.</p>
+            </div>
+            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 flex flex-col items-center text-center">
+                <div class="w-24 h-24 bg-emerald-500 rounded-full mb-4 flex items-center justify-center text-3xl font-bold">
+                    {{AUTHOR_NAME[0]}}
+                </div>
+                <h3 class="text-xl font-bold mb-1">{{AUTHOR_NAME}}</h3>
+                <p class="text-emerald-500 text-sm font-semibold mb-4">{{AUTHOR_TITLE}}</p>
+                <p class="text-slate-400 text-sm italic">"Esperto nel settore iGaming con oltre 10 anni di esperienza nell'analisi dei flussi di pagamento e regolamentazioni internazionali."</p>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="container mx-auto px-4 mb-20">
-        <div id="faq" class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold mb-8 text-center">{{FAQ_TITLE}}</h2>
-            <div class="space-y-4">
-                {{FAQ_ITEMS}}
-            </div>
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+        <h2 class="text-3xl font-bold mb-10 text-center">{{FAQ_TITLE}}</h2>
+        <div id="faq" class="space-y-4">
+            {{FAQ_ITEMS}}
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="md:col-span-2">
+    <footer class="bg-slate-950 pt-20 pb-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
                     <div class="flex items-center gap-2 mb-6">
-                        <div class="w-8 h-8 bg-cyan-500 rounded flex items-center justify-center">
-                            <i data-lucide="shield-check" class="text-white w-5 h-5"></i>
+                        <div class="bg-emerald-500 p-1.5 rounded-lg">
+                            <i data-lucide="zap" class="text-white w-6 h-6"></i>
                         </div>
-                        <span class="text-xl font-bold tracking-tight">TESTPAGE<span class="text-cyan-500">1</span></span>
+                        <span class="text-xl font-bold tracking-tight">TESTPAGE<span class="text-emerald-500">1</span></span>
                     </div>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                    <p class="text-slate-400 text-sm leading-relaxed">
                         {{FOOTER_DESCRIPTION}}
                     </p>
-                    <div class="flex gap-4">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/18_plus.svg/640px-18_plus.svg.png" alt="18+" class="h-8 opacity-50 grayscale hover:grayscale-0 transition">
-                        <img src="https://upload.wikimedia.org/wikipedia/it/thumb/a/a5/Logo_ADM.svg/1200px-Logo_ADM.svg.png" alt="ADM" class="h-8 opacity-50 grayscale hover:grayscale-0 transition">
-                    </div>
                 </div>
-                <div>
-                    <h4 class="font-bold mb-6">Link Rapidi</h4>
-                    <ul class="text-slate-400 text-sm space-y-4">
-                        <li><a href="#" class="hover:text-cyan-400 transition">Migliori Casino</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition">Prelievi Veloci</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition">Contatti</a></li>
-                        <li><a href="#" class="hover:text-cyan-400 transition">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-6">Supporto</h4>
-                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
-                        <p class="text-xs text-slate-400 mb-2">Hai bisogno di aiuto?</p>
-                        <a href="mailto:info@testpage1.com" class="text-cyan-400 font-bold hover:underline">info@testpage1.com</a>
+                <div class="col-span-1 md:col-span-2">
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800">
+                        <div class="flex flex-wrap gap-8 items-center justify-center opacity-50 grayscale hover:grayscale-0 transition duration-500">
+                            <span class="font-bold text-xl">18+</span>
+                            <span class="font-bold text-xl">GAMSTOP</span>
+                            <span class="font-bold text-xl">SSL SECURE</span>
+                            <span class="font-bold text-xl">RESPONSIBLE GAMING</span>
+                        </div>
+                        <p class="mt-6 text-[11px] text-slate-500 text-center leading-relaxed">
+                            {{COMPLIANCE_TEXT}}
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="pt-8 border-t border-slate-800 text-center">
-                <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-4">
-                    {{COMPLIANCE_TEXT}}
-                </p>
-                <p class="text-slate-600 text-xs">
-                    &copy; {{YEAR}} testpage1. Tutti i diritti riservati. Il gioco può causare dipendenza patologica.
-                </p>
+            <div class="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-xs">
+                <p>&copy; {{YEAR}} testpage1. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-emerald-500">Privacy Policy</a>
+                    <a href="#" class="hover:text-emerald-500">Cookie Policy</a>
+                    <a href="#" class="hover:text-emerald-500">Contatti</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Casino Data
         const casinos = {{CASINOS_JSON}};
 
-        // Initialization
-        document.addEventListener('DOMContentLoaded', () => {
-            lucide.createIcons();
-            renderTopCards();
-            renderTable(casinos);
-        });
-
-        // Render Top 3 Cards
         function renderTopCards() {
-            const container = document.getElementById('top-cards');
+            const container = document.getElementById('top-cards-container');
             const top3 = casinos.slice(0, 3);
             
             container.innerHTML = top3.map((casino, index) => `
-                <div class="glass-card rounded-3xl p-6 relative overflow-hidden group">
-                    ${index === 0 ? '<div class="absolute top-0 right-0 bg-yellow-500 text-slate-950 text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase">Migliore Scelta</div>' : ''}
-                    <div class="flex justify-between items-start mb-6">
-                        <img src="${casino.logo}" alt="${casino.name}" class="h-12 w-auto object-contain rounded-lg">
-                        <div class="text-right">
-                            <div class="flex items-center gap-1 text-yellow-500 mb-1">
-                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                <span class="font-bold">${casino.rating}</span>
+                <div class="relative group">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-500 text-slate-950 text-[10px] font-black px-3 py-1 rounded-full z-20 shadow-lg">
+                        ${index === 0 ? 'IL MIGLIORE' : 'CONSIGLIATO'}
+                    </div>
+                    <div class="bg-slate-800 rounded-3xl p-6 border-2 ${index === 0 ? 'border-emerald-500 shadow-[0_0_30px_rgba(16,185,129,0.2)]' : 'border-slate-700'} relative z-10 h-full flex flex-col">
+                        <div class="flex justify-between items-start mb-6">
+                            <img src="${casino.logo}" alt="${casino.name}" class="w-16 h-16 rounded-2xl bg-slate-900 p-2 object-contain">
+                            <div class="text-right">
+                                <div class="flex items-center gap-1 text-yellow-400 font-bold">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    ${casino.rating}
+                                </div>
+                                <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Recensioni</span>
                             </div>
-                            <div class="text-[10px] text-slate-400 uppercase">Voto Esperti</div>
                         </div>
+                        <h3 class="text-xl font-bold mb-2">${casino.name}</h3>
+                        <div class="bg-slate-900/50 rounded-xl p-4 mb-6 flex-grow">
+                            <p class="text-[10px] text-emerald-400 font-bold uppercase mb-1">Bonus Benvenuto</p>
+                            <p class="text-lg font-extrabold text-white">${casino.bonus}</p>
+                        </div>
+                        <ul class="mb-8 space-y-2">
+                            ${casino.highlights.slice(0, 3).map(h => `
+                                <li class="flex items-center gap-2 text-xs text-slate-400">
+                                    <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i> ${h}
+                                </li>
+                            `).join('')}
+                        </ul>
+                        <a href="${casino.url}" class="w-full py-4 rounded-xl text-center font-bold text-white cta-gradient flex items-center justify-center gap-2">
+                            GIOCA ORA <i data-lucide="external-link" class="w-4 h-4"></i>
+                        </a>
                     </div>
-                    <div class="mb-6">
-                        <div class="text-xs text-cyan-400 font-bold uppercase mb-1">Bonus Benvenuto</div>
-                        <div class="text-xl font-extrabold text-white">${casino.bonus}</div>
-                    </div>
-                    <div class="space-y-3 mb-8">
-                        ${casino.highlights.slice(0, 2).map(h => `
-                            <div class="flex items-center gap-2 text-sm text-slate-300">
-                                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-500"></i>
-                                ${h}
-                            </div>
-                        `).join('')}
-                    </div>
-                    <a href="${casino.link}" class="cta-gradient block w-full py-4 rounded-xl text-center font-bold text-white shadow-lg">
-                        GIOCA ORA
-                    </a>
                 </div>
             `).join('');
             lucide.createIcons();
         }
 
-        // Render Main Table
         function renderTable(data) {
             const tbody = document.getElementById('casino-table-body');
             tbody.innerHTML = data.map(casino => `
-                <tr class="table-row group transition hover:bg-slate-800/50">
-                    <td class="p-5">
+                <tr class="table-row-alt group hover:bg-slate-800/80 transition-colors">
+                    <td class="px-6 py-6">
                         <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-slate-800 rounded-xl p-2 flex items-center justify-center border border-slate-700">
-                                <img src="${casino.logo}" alt="${casino.name}" class="max-h-full max-w-full object-contain">
+                            <img src="${casino.logo}" alt="${casino.name}" class="w-12 h-12 rounded-lg bg-slate-900 p-1 object-contain">
+                            <div>
+                                <span class="block font-bold text-white">${casino.name}</span>
+                                <span class="text-[10px] text-slate-500 uppercase font-bold tracking-tighter">Licenza Verificata</span>
                             </div>
-                            <span class="font-bold text-white">${casino.name}</span>
                         </div>
                     </td>
-                    <td class="p-5">
-                        <div class="flex items-center gap-1 text-yellow-500 font-bold">
-                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                            ${casino.rating}
+                    <td class="px-6 py-6 text-center">
+                        <div class="inline-flex items-center gap-1 bg-slate-900 px-2 py-1 rounded-md">
+                            <span class="text-yellow-400 font-bold text-sm">${casino.rating}</span>
+                            <i data-lucide="star" class="w-3 h-3 text-yellow-400 fill-current"></i>
                         </div>
                     </td>
-                    <td class="p-5">
-                        <div class="text-sm font-bold text-white">${casino.bonus}</div>
-                        <div class="text-[10px] text-slate-500 mt-1 uppercase">Termini applicati</div>
+                    <td class="px-6 py-6">
+                        <span class="text-sm font-bold text-emerald-400">${casino.bonus}</span>
                     </td>
-                    <td class="p-5 hidden md:table-cell">
+                    <td class="px-6 py-6 hidden lg:table-cell">
                         <div class="flex gap-2">
-                            ${casino.payments.map(p => `<img src="${p}" class="h-5 w-auto grayscale opacity-70 hover:opacity-100 transition">`).join('')}
+                            ${casino.payments.slice(0, 3).map(p => `<img src="${p}" class="h-5 w-auto opacity-70 grayscale hover:grayscale-0 transition" alt="payment">`).join('')}
                         </div>
                     </td>
-                    <td class="p-5 hidden lg:table-cell">
-                        <span class="inline-flex items-center px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-medium border border-cyan-500/20">
-                            ${casino.highlight}
-                        </span>
+                    <td class="px-6 py-6 hidden md:table-cell">
+                        <span class="text-xs text-slate-400 italic">${casino.highlights[0]}</span>
                     </td>
-                    <td class="p-5">
-                        <div class="flex flex-col items-center gap-2">
-                            <a href="${casino.link}" class="cta-gradient px-8 py-3 rounded-xl font-bold text-white text-sm whitespace-nowrap">
-                                VISITA SITO
-                            </a>
-                            <a href="#" class="text-[10px] text-slate-500 hover:text-slate-300 underline">Recensione</a>
-                        </div>
+                    <td class="px-6 py-6 text-right">
+                        <a href="${casino.url}" class="inline-flex items-center gap-2 bg-emerald-500 text-white px-6 py-2.5 rounded-lg font-bold text-sm cta-gradient">
+                            VISITA <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </a>
                     </td>
                 </tr>
             `).join('');
             lucide.createIcons();
         }
 
-        // Filter Logic
         function filterCasinos(type) {
             let filtered = [...casinos];
-            if (type === 'top_rated') filtered = casinos.filter(c => parseFloat(c.rating) >= 4.8);
-            if (type === 'fast_payout') filtered = casinos.filter(c => c.is_fast_payout);
-            
-            // UI Update for buttons
-            document.querySelectorAll('[onclick^="filter"]').forEach(btn => {
-                btn.classList.remove('bg-cyan-500', 'text-slate-950', 'border-cyan-500');
-                btn.classList.add('bg-slate-800', 'text-slate-300');
-            });
-            event.currentTarget.classList.add('bg-cyan-500', 'text-slate-950', 'border-cyan-500');
-            event.currentTarget.classList.remove('bg-slate-800', 'text-slate-300');
-
+            if (type === 'top') filtered = casinos.filter(c => c.rating >= 4.8);
+            if (type === 'fast') filtered = casinos.filter(c => c.fast_payout === true);
             renderTable(filtered);
         }
 
-        // Sort Logic
         function sortCasinos(criteria) {
             let sorted = [...casinos];
             if (criteria === 'rating') sorted.sort((a, b) => b.rating - a.rating);
             if (criteria === 'name') sorted.sort((a, b) => a.name.localeCompare(b.name));
-            if (criteria === 'recommended') sorted = casinos;
+            if (criteria === 'recommended') sorted = [...casinos];
             renderTable(sorted);
         }
 
-        // FAQ Toggle
         function toggleFaq(index) {
-            const content = document.getElementById(`faq-content-${index}`);
-            const icon = document.getElementById(`faq-icon-${index}`);
-            const isActive = content.classList.contains('active');
+            const faqItems = document.querySelectorAll('.faq-content');
+            const icons = document.querySelectorAll('.faq-icon');
             
-            // Close all
-            document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('[id^="faq-icon-"]').forEach(el => el.style.transform = 'rotate(0deg)');
-
-            if (!isActive) {
-                content.classList.add('active');
-                icon.style.transform = 'rotate(180deg)';
-            }
+            faqItems[index].classList.toggle('hidden');
+            icons[index].classList.toggle('rotate-180');
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTopCards();
+            renderTable(casinos);
+            lucide.createIcons();
+        });
     </script>
 </body>
 </html>
